@@ -15,11 +15,7 @@ public static class MauiProgram
 
         var builder = MauiApp.CreateBuilder();
 		builder
-<<<<<<< HEAD
-			.UseMauiApp<App>(x => new App(new AutofacServiceProvider(autofacContainer)))  // <<<<<<<<<<<<<<<<<<<<< I'm not sure I should have to do this. Not all apps will need to Service Locate the start page from the App.cs. This was just because of the fact I'm using Flyouts on the AppShell and using viewmodel databinding.
-=======
-			.UseMauiApp<App>(x => new App(new AutofacServiceProvider(autofacContainer)))
->>>>>>> e3c8ae5b1b73d11621fe893763d485b7ddcd07da
+            .UseMauiApp<App>(x => new App(new AutofacServiceProvider(autofacContainer)))  // <<<<<<<<<<<<<<<<<<<<< I'm not sure I should have to do this. Not all apps will need to Service Locate the start page from the App.cs. This was just because of the fact I'm using Flyouts on the AppShell and using viewmodel databinding.
             .ConfigureFonts(fonts =>
 			{
 				fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
