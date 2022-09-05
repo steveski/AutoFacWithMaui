@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:AutoFacWithMaui.ViewModels"
+             x:DataType="vm:MainPageViewModel"
+             x:Class="AutoFacWithMaui.Pages.MainPage"
+             Title="{Binding Title}">
+
+    <ScrollView>
+        <VerticalStackLayout Margin="0,10,0,10"
+                             Spacing="6">
+            <Frame Margin="5,0,0,0" BorderColor="Transparent">
+                <HorizontalStackLayout Spacing="15">
+                    <Image Source="dotnet_bot.svg"
+                           HeightRequest="30"
+                           VerticalOptions="Center" />
+                    <Label Text="Some Item"
+                           FontSize="18"
+                           VerticalOptions="Center">
+                    </Label>
+                </HorizontalStackLayout>
+            </Frame>
+            <Line StrokeThickness="2" BackgroundColor="LightSkyBlue" />
+
+            <Frame Margin="5,0,0,0" BorderColor="Transparent">
+                <HorizontalStackLayout Spacing="15">
+                    <Image Source="dotnet_bot.svg"
+                               HeightRequest="30" />
+                    <Label Text="Another Item"
+                           FontSize="18"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame>
+            <Line StrokeThickness="2" BackgroundColor="LightSkyBlue" />
+
+            <Frame Margin="5,0,0,0" BorderColor="Transparent">
+                <HorizontalStackLayout Spacing="15">
+                    <Image Source="dotnet_bot.svg"
+                           HeightRequest="30" />
+                    <Label Text="{Binding SomeMessage}"
+                           FontSize="18"
+                           VerticalOptions="Center" />
+                    <Label Text="( This message is from the injected service )"
+                           FontSize="11"
+                           VerticalOptions="Center" />
+                </HorizontalStackLayout>
+            </Frame>
+            <Line StrokeThickness="2" BackgroundColor="LightSkyBlue" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
