@@ -35,7 +35,7 @@ public static class MauiProgram
         var autofacBuilder = new ContainerBuilder();
         autofacBuilder.Populate(builder.Services);
 
-        autofacBuilder.RegisterType<SomeService>().As<SomeService>().InstancePerDependency();  // <<<<<<<<<<<<<<<<<<<<< But the issue I'm trying to resolve is why registration through AutoFac won't work
+        autofacBuilder.RegisterType<SomeService>().As<ISomeService>().InstancePerDependency();  // <<<<<<<<<<<<<<<<<<<<< But the issue I'm trying to resolve is why registration through AutoFac won't work
         autofacContainer = autofacBuilder.Build();
         
 
